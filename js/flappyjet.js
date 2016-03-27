@@ -23,7 +23,7 @@ var mainState = {
     game.physics.arcade.enable(pipe);
 
     // Add velocity to the pipe to make it move left
-    pipe.body.velocity.x = 0 - (width/5);
+    pipe.body.velocity.x = 0 - (width/6);
     
     // Automatically kill the pipe when it's no longer visible 
     pipe.checkWorldBounds = true;
@@ -74,7 +74,7 @@ var mainState = {
     game.input.onTap.add(this.jump, this);
     spaceKey.onDown.add(this.jump, this);
 
-    this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);
+    this.timer = game.time.events.loop(1000, this.addRowOfPipes, this);
 
     this.score = 0;
     this.labelScore = game.add.text(20, 20, "0", 
