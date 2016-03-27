@@ -32,3 +32,23 @@ body {
 #play {
     font-weight: 400;
 }
+
+#flappyjet {
+    .close-flappyjet {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }   
+    .closebt {
+	      -webkit-transition: all 0.2s;
+	      -moz-transition: all 0.2s;
+	      -ms-transition: all 0.2s;
+	      -o-transition: all 0.2s;
+	      transition: all 0.2s;
+	      cursor:pointer;
+    }
+
+    .closebt:hover {
+	      transform:rotate(90deg);
+    }
+}

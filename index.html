@@ -3,12 +3,40 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic|Exo+2:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
     <link rel="stylesheet" href="/css/styles.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="/js/phaser.min.js"></script>
+    <title>Jethro Kuan</title>
   </head>
   <body>
     <header>
       <h1 id="name">Jethro<br> Kuan</h1>
-      <p>I <a id="code" href="https://github.com/jethrokuan/">code</a>, <a id="write" href="http://blog.jethrokuan.com/">write</a>, <a id="make" href="">make useful things</a> and <a id="play" href="#">useless things</a>.</p>
+      <p>I <a id="code" href="https://github.com/jethrokuan/">code</a>, <a id="write" href="http://blog.jethrokuan.com/">write</a>, <a id="make" href="">make useful things</a> and <a id="play" href="#flappyjet">useless things</a>. <a href="">Talk to Me.</a></p>
     </header>
-  </body>
+    <!--DEMO01-->
+    <div id="flappyjet">
+      <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+      <div class="close-flappyjet">
+        <img class="closebt" alt="" src="/images/close.svg"/>
+      </div>
+      
+      <div class="modal-content">
+        <div id="phaser"/>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="/js/animatedModal.min.js"></script>
+    <script>
+     $(document).ready(function(){
+       $("#play").animatedModal({
+         "modalTarget": "flappyjet",
+         "animatedIn": "zoomIn",
+         "animatedOut": "bounceOut",
+         "color": "#71c5cf"
+       }); 
+     })
+    </script>
+    <script type="text/javascript" src="/js/flappyjet.js"></script>
+  </body>  
 </html>
