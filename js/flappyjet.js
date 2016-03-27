@@ -32,17 +32,16 @@ var mainState = {
 
   addRowOfPipes: function() {
     numPipes = Math.floor(height/19);
+    holesize = Math.floor(numPipes / 3.5);
     console.log(numPipes);
     // This will be the hole position
     var hole = Math.floor(Math.random() * (numPipes-5)) + 1;
 
     // With one big hole at position 'hole' and 'hole + 1'
     var list = [];
-    for (var i = 0; i <= 10; i++) {
+    for (var i = 0; i <= holesize; i++) {
       list.push(hole + i);
     }
-
-    console.log(hole);
     
     for (var i = 0; i < numPipes; i++)
       if (-1 == $.inArray(i, list)) {
@@ -72,6 +71,7 @@ var mainState = {
     // Call the 'jump' function when the spacekey is hit
     var spaceKey = game.input.keyboard.addKey(
       Phaser.Keyboard.SPACEBAR);
+    game.input.onTap.add(this.jump, this);
     spaceKey.onDown.add(this.jump, this);
 
     this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);
