@@ -1,0 +1,34 @@
+@import "reset";
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+@import "variables";
+@import "typography";
+
+body {   
+    background-color: $white;
+    padding: 2rem;
+    @include outer-container;
+}
+
+#name {
+    font-size: 10rem;
+    line-height: 8.5rem;
+    color: $black;
+}
+
+#code {
+    color: $teal;
+}
+
+#write {
+    color: $pink;
+}
+
+#make {
+    color: $orange;
+}
+
+#play {
+    font-weight: 400;
+}
