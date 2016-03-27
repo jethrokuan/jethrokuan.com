@@ -29,7 +29,7 @@
     <script src="/js/animatedModal.min.js"></script>
     <script>
      $(document).ready(function(){
-       $("#play").click(function() {
+       $("#play").one("click", function() {
          $.getScript("/js/flappyjet.js");
        });
        $("#play").animatedModal({
