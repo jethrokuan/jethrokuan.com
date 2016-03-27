@@ -29,6 +29,9 @@
     <script src="/js/animatedModal.min.js"></script>
     <script>
      $(document).ready(function(){
+       $("#play").click(function() {
+         $.getScript("/js/flappyjet.js");
+       });
        $("#play").animatedModal({
          "modalTarget": "flappyjet",
          "animatedIn": "zoomIn",
@@ -37,6 +40,5 @@
        }); 
      })
     </script>
-    <script type="text/javascript" src="/js/flappyjet.js"></script>
   </body>  
 </html>
