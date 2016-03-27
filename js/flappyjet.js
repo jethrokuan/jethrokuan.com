@@ -23,8 +23,8 @@ var mainState = {
     game.physics.arcade.enable(pipe);
 
     // Add velocity to the pipe to make it move left
-    pipe.body.velocity.x = -200; 
-
+    pipe.body.velocity.x = 0 - (width/5);
+    
     // Automatically kill the pipe when it's no longer visible 
     pipe.checkWorldBounds = true;
     pipe.outOfBoundsKill = true;
