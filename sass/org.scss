@@ -1,0 +1,70 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "variables";
+
+html {
+    font-size: 35%;
+
+    @include media($small-screen) {
+        font-size: 50%;
+    }
+
+    @include media($medium-screen) {
+        font-size: 62.5%;
+    }
+}
+
+body {
+    background-color: $white;
+    color: $black;
+    padding: 100px;
+}
+
+h1,h2,h3 {
+    color: $black;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight:700;
+    margin: 5rem 0 5rem 0;
+}
+
+.section-number-2 {
+    display: none;
+}
+
+.section-number-2::after {
+    content: ".";
+}
+
+a {
+    color: lighten($black, 40%);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.todo {
+    font-weight: 700;
+}
+
+.TO_READ {
+    color: $pink;
+}
+    
+
+.NEXT {
+    color: $orange;
+}   
+
+.DONE {
+    font-weight:700;
+    color: $green;
+}
+
+/* Local Variables: */
+/* firestarter: "sassc %f ../css/org.css" */
+/* End: */

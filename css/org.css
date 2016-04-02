@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html {
+  font-size: 35%; }
+  @media screen and (min-width: 360px) {
+    html {
+      font-size: 50%; } }
+  @media screen and (min-width: 768px) {
+    html {
+      font-size: 62.5%; } }
+
+body {
+  background-color: #fffff8;
+  color: #111;
+  padding: 100px; }
+
+h1, h2, h3 {
+  color: #111;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 2rem; }
+
+h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 5rem 0 5rem 0; }
+
+.section-number-2 {
+  display: none; }
+
+.section-number-2::after {
+  content: "."; }
+
+a {
+  color: #777777;
+  text-decoration: none;
+  font-weight: 700; }
+
+.todo {
+  font-weight: 700; }
+
+.TO_READ {
+  color: #FF0066; }
+
+.NEXT {
+  color: #FA6900; }
+
+.DONE {
+  font-weight: 700;
+  color: #88C425; }
+
+/* Local Variables: */
+/* firestarter: "sassc %f ../css/org.css" */
+/* End: */

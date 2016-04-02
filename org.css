@@ -1,0 +1,3 @@
+html{box-sizing:border-box}*,*::after,*::before{box-sizing:inherit}body{background-color:#fffff8;color:#111;max-width:68em;margin-left:auto;margin-right:auto}body::after{clear:both;content:"";display:table}h2{font-weight:400}
+
+/*# sourceMappingURL=org.css.map */
