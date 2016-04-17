@@ -44,6 +44,11 @@ a {
     padding: 2px;
 }
 
+span.hire a {
+    color: $pink;
+    font-size: 3rem;
+}
+
 #tiles {
     @include outer-container();
     max-width: 100%;
