@@ -50,6 +50,8 @@ a {
     font-weight: 700;
 }
 
+.TO_READ, .NEXT, .READING, .DONE {text-transform: uppercase;}
+
 .TO_READ {
     color: $pink;
 }
@@ -57,7 +59,11 @@ a {
 
 .NEXT {
     color: $orange;
-}   
+}
+
+.READING {
+    color: $purple;
+}
 
 .DONE {
     font-weight:700;
