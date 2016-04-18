@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2016-04-04 Mon 09:28 -->
+<!-- 2016-04-18 Mon 13:37 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title></title>
@@ -144,7 +144,6 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1>Jethro's Reading List</h1>
 <div id="outline-container-orgheadline1" class="outline-2">
 <h2 id="orgheadline1"><span class="section-number-2">1</span> <span class="todo TO_READ">TO-READ</span> A Random Walk Down Wall Street</h2>
 </div>
@@ -194,7 +193,7 @@ for the JavaScript code in this tag.
 <h2 id="orgheadline15"><span class="section-number-2">15</span> <span class="todo TO_READ">TO-READ</span> The Egg</h2>
 </div>
 <div id="outline-container-orgheadline16" class="outline-2">
-<h2 id="orgheadline16"><span class="section-number-2">16</span> <span class="todo TO_READ">TO-READ</span> Ismael</h2>
+<h2 id="orgheadline16"><span class="section-number-2">16</span> <span class="todo NEXT">NEXT</span> Ishmael</h2>
 </div>
 <div id="outline-container-orgheadline17" class="outline-2">
 <h2 id="orgheadline17"><span class="section-number-2">17</span> <span class="todo TO_READ">TO-READ</span> Sophie's world</h2>
@@ -269,7 +268,7 @@ for the JavaScript code in this tag.
 <h2 id="orgheadline35"><span class="section-number-2">35</span> <span class="todo TO_READ">TO-READ</span> Infinite Jest</h2>
 </div>
 <div id="outline-container-orgheadline36" class="outline-2">
-<h2 id="orgheadline36"><span class="section-number-2">36</span> <span class="todo NEXT">NEXT</span> SICP</h2>
+<h2 id="orgheadline36"><span class="section-number-2">36</span> <span class="todo READING">READING</span> SICP</h2>
 </div>
 <div id="outline-container-orgheadline37" class="outline-2">
 <h2 id="orgheadline37"><span class="section-number-2">37</span> <span class="todo TO_READ">TO-READ</span> An Eternal Golden Braid</h2>
@@ -360,10 +359,52 @@ for the JavaScript code in this tag.
 <div id="outline-container-orgheadline57" class="outline-2">
 <h2 id="orgheadline57"><span class="section-number-2">57</span> <span class="done DONE">DONE</span> Jump Start Sass</h2>
 </div>
+<div id="outline-container-orgheadline58" class="outline-2">
+<h2 id="orgheadline58"><span class="section-number-2">58</span> <span class="todo READING">READING</span> April is Dead Wake</h2>
+<div class="outline-text-2" id="text-58">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+var TOREAD = [];
+var NEXT = [];
+var READING = [];
+var DONE = [];
+$(document).ready(function() {
+  $(".outline-2").each(function() {
+    var item = $(this).find(".todo, .done");
+    var title = $(this).find($("h2")).text().split(" ").slice(2).join(" ");
+    if (item.hasClass("TO_READ")) TOREAD.push(title);
+    if (item.hasClass("NEXT")) NEXT.push(title);
+    if (item.hasClass("READING")) READING.push(title);
+    if (item.hasClass("DONE")) DONE.push(title);
+  });
+
+  $("#content").addClass("container");
+
+  $("#content").html('<h1>Jethro\'s Reading List</h1><section id="TO-READ"><h2>To Read</h2><ol></ol></section><section id="NEXT"><h2>Next</h2><ol></ol></section><section id="READING"><h2>Reading</h2><ol></ol></section><section id="DONE"><h2>Done</h2><ol></ol></section>');
+
+  $.each(TOREAD, function(key, title) {
+    $("#TO-READ > ol").append("<li>" + title + "</li>");
+  });
+
+  $.each(NEXT, function(key, title) {
+    $("#NEXT > ol").append("<li>" + title + "</li>");
+  });
+
+  $.each(READING, function(key, title) {
+    $("#READING > ol").append("<li>" + title + "</li>");
+  });
+
+  $.each(DONE, function(key, title) {
+    $("#DONE > ol").append("<li>" + title + "</li>");
+  });
+});
+</script>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2016-04-04 Mon 09:28</p>
+<p class="date">Created: 2016-04-18 Mon 13:37</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

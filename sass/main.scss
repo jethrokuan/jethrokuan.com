@@ -18,6 +18,12 @@ body {
     color: $black;
 }
 
+#pitch {
+    margin: 0 0 5rem 0;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
 #code {color: $teal;}
 #write {color: $pink;}
 #read {color: $green;}
