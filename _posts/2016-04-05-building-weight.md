@@ -21,8 +21,7 @@ The first item we needed was a load cell. Load cells send electric signals of a 
 
 A typical load cell consists of four strain gauges, arranged in a Wheatstone bridge formation. 
 
-{% image
-  https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Wheatstonebridge_current.svg/300px-Wheatstonebridge_current.svg.png 600 400 %}
+<amp-img width="600" height="400" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Wheatstonebridge_current.svg/300px-Wheatstonebridge_current.svg.png"></amp-img>
 
 Wheatstone bridges are electrical circuit structures, typically used to accurately measure an unknown electrical resistance. However, it can also be used to vary the potential difference between two ends of a circuit, in a way that's independent on the current that passes through it. Slight variations in strain alter the electrical resistance of the circuit. This in turn causes variations in the potential difference across the two ends of the Wheatstone bridge. This potential difference is the electrical signal produced by load cell.
 
@@ -35,7 +34,7 @@ Individual electronic parts were costly. Vishnu and I made a trip down to Sim Li
 
 Hoping to scavenge the parts from a working product, we bought a weighing scale for 12 dollars.
 
-{% image /assets/images/weighing-scale.jpg 600 400 %}
+<amp-img width="600" height="400" src="/assets/images/weighing-scale.jpg"></amp-img>
 
 We tried using the load cells from the weighing scale, but the metallic ends on the load cell were too small. Soldering the load cell onto wires needed skills or equipment that we didn't possess, and we ended up burning the load cells.
 
@@ -65,13 +64,13 @@ Remember that the electrical signal produced is linear to the amount of force ap
 
 However, the graph resembled a logarithmic equation: some attentuation in the increase in value was observed. We could not calculate a value of *gradient* that would be accurate across all weights.
 
-{% image https://cdn.sparkfun.com/assets/learn_tutorials/3/8/2/img0054.png 600 400 %}
+<amp-img width="600" height="400" src="https://cdn.sparkfun.com/assets/learn_tutorials/3/8/2/img0054.png"></amp-img>
 
 A while had passed before we realized our mistake. We were treating the straight-bar load cell as a regular circular load cell, by placing weight directly on top of it. It operated differently, measuring weight by its deformation. It needed to be fixated onto a surface on one end, and have force applied on the other to measure the amount of force applied trying to "bend" it.
 
 We had no wood to drill the load cell into, nor did we have screws of the correct size, so we had to work with a makeshift structure using scotchtape and some cardboard to prop it up. Hunger, as always, was haunting Vishnu, and we made it quick. The scotchtape could not hold the weight plates, so we tested that it worked with two iPhones. We drove out to Springleaf Prata in celebration, and also in part to satisfy Vishnu's cravings.
 
-{% image /assets/images/weighing-scale-2.jpg 600 400 %}
+<amp-img width="600" height="400" src="/assets/images/weighing-scale-2.jpg"></amp-img>
 
 ## Connecting it to the Web
 Back from a tantalizing dinner, we were ready to finish it up. We split the workload -- Vishnu was to resume work on the hardware, and use the ESP8266 module to send data to the web. I was to build the backend server, as well as persist the data sent by Vishnu to a database. Kevan was to get a quick prototype of an Android app working with App Inventor.
@@ -119,8 +118,9 @@ client.print(url);
 
 Once we corrected the typo in the POST request, we are able to get data transmitted to my server and stored periodically! 
 
-## Native Application
-{% image http://www.imagnity.com/wp-content/uploads/2013/03/WebComponent-JSON-Response-ParseResults.png 600 400 %}
+<amp-img width="600" height="400" src="http://www.imagnity.com/wp-content/uploads/2013/03/WebComponent-JSON-Response-ParseResults.png"></amp-img>
+
+# Native Application
 
 Meanwhile, App Inventor gave hell to Kevan. Support for parsing custom JSON was horrible, and writing a parser with code blocks was both exhausting and a waste of time.
 

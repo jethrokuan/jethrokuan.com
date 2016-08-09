@@ -23,7 +23,7 @@ beet import -s ~/Downloads
 
 This is the resultant folder structure:
 
-{% image /assets/images/music.png 600 400 %}
+<amp-img width="600" height="400" src="/assets/images/music.png"></amp-img>
 
 Notice how it replaces illegal characters in the file system (`AC/DC => AC_DC`). This may seem minor, but it'll save you a lot of time when backing up your files and realizing you have incompatible file/folder names. With beet I can guarantee that my music library is always neat and organized. Should you delete or edit some files, simply run `beet up` to update your local library.
 
@@ -33,8 +33,8 @@ Notice how it replaces illegal characters in the file system (`AC/DC => AC_DC`).
 
 [ncmpcpp](http://rybczak.net/ncmpcpp/) is a music player built with `C++`. It is highly configurable, and also has tag editing capabilities. Its killer feature is its incredibly simple song queue.
 
-{% image /assets/images/ncmpcpp.png 600 400 %}
- 
+<amp-img width="600" height="400" src="/assets/images/ncmpcpp.png"></amp-img>
+
 I have `ncmpcpp` bound to `Ctrl-Alt-P`, so when I activate the shortcut, it pops up instantly (one of the pros of it being cli-based is that it's super light). Updated your database with `beet` recently? No problem! Just type `u` and the changes are immediately reflected. `p` to pause, `>` to skip song, `~` to add random songs to the play queue. There's also a music browser that lets you add whole albums or individual songs after the current song, or at the end of the playlist.
 
 ## Email
@@ -50,7 +50,6 @@ An additional benefit of having your email offline is that they can be indexed. 
 > - add to to-do list and archive if it is something that requires an action or just needs a longer reply than I have time to write
 
 The gif below demonstrates my workflow:
-
-{% image /assets/images/workflow.gif 600 400 %}
+<amp-img width="600" height="400" src="/assets/images/workflow.gif"></amp-img>
 
 Nifty! Having everything in one place really helps with organization. Although not exactly command line, it does interact with the command line for it to work.
