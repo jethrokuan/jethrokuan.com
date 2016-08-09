@@ -1,0 +1,12 @@
+title: Jethro Kuan
+description: >
+  Tech Director @ Flezio. Emacs Evangelist. Codemonkey.
+baseurl: ""
+url: "http://www.jethrokuan.com/"
+name: "Jethro Kuan"
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title.html
+kramdown:
+  parse_block_html: true
+gems:
+  - jekyll-paginate
