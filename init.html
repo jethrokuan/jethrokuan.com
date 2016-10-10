@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2016-10-10 Mon 09:50 -->
+<!-- 2016-10-10 Mon 12:19 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title>Jethro's Emacs.d Configuration</title>
@@ -302,7 +302,7 @@ for the JavaScript code in this tag.
 <li><a href="#orgheadline108">7.12. git-gutter-fringe+</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline124">8. Org-mode</a>
+<li><a href="#orgheadline125">8. Org-mode</a>
 <ul>
 <li><a href="#orgheadline111">8.1. Prerequisites</a>
 <ul>
@@ -318,39 +318,40 @@ for the JavaScript code in this tag.
 <li><a href="#orgheadline118">8.8. org-pomodoro</a></li>
 <li><a href="#orgheadline119">8.9. org-download</a></li>
 <li><a href="#orgheadline120">8.10. jethro/org-sort-books</a></li>
-<li><a href="#orgheadline121">8.11. jethro/org-after-save-init</a></li>
-<li><a href="#orgheadline122">8.12. gtd-mode</a></li>
-<li><a href="#orgheadline123">8.13. epresent</a></li>
+<li><a href="#orgheadline121">8.11. jethro/org-after-save-books</a></li>
+<li><a href="#orgheadline122">8.12. jethro/org-after-save-init</a></li>
+<li><a href="#orgheadline123">8.13. gtd-mode</a></li>
+<li><a href="#orgheadline124">8.14. epresent</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline129">9. Project Management</a>
+<li><a href="#orgheadline130">9. Project Management</a>
 <ul>
-<li><a href="#orgheadline125">9.1. Smerge-mode</a></li>
-<li><a href="#orgheadline126">9.2. Magit</a></li>
-<li><a href="#orgheadline128">9.3. Projectile</a>
+<li><a href="#orgheadline126">9.1. Smerge-mode</a></li>
+<li><a href="#orgheadline127">9.2. Magit</a></li>
+<li><a href="#orgheadline129">9.3. Projectile</a>
 <ul>
-<li><a href="#orgheadline127">9.3.1. Projectile Commander</a></li>
+<li><a href="#orgheadline128">9.3.1. Projectile Commander</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline132">10. Profiling</a>
+<li><a href="#orgheadline133">10. Profiling</a>
 <ul>
-<li><a href="#orgheadline130">10.1. esup</a></li>
-<li><a href="#orgheadline131">10.2. keyfreq</a></li>
+<li><a href="#orgheadline131">10.1. esup</a></li>
+<li><a href="#orgheadline132">10.2. keyfreq</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline142">11. Miscellaneous</a>
+<li><a href="#orgheadline143">11. Miscellaneous</a>
 <ul>
-<li><a href="#orgheadline133">11.1. Pivotal-mode</a></li>
-<li><a href="#orgheadline134">11.2. which-key</a></li>
-<li><a href="#orgheadline135">11.3. nameless</a></li>
-<li><a href="#orgheadline136">11.4. firestarter</a></li>
-<li><a href="#orgheadline137">11.5. Paradox</a></li>
-<li><a href="#orgheadline138">11.6. focus</a></li>
-<li><a href="#orgheadline139">11.7. artbollocks</a></li>
-<li><a href="#orgheadline140">11.8. darkroom</a></li>
-<li><a href="#orgheadline141">11.9. bury-successful-compilation</a></li>
+<li><a href="#orgheadline134">11.1. Pivotal-mode</a></li>
+<li><a href="#orgheadline135">11.2. which-key</a></li>
+<li><a href="#orgheadline136">11.3. nameless</a></li>
+<li><a href="#orgheadline137">11.4. firestarter</a></li>
+<li><a href="#orgheadline138">11.5. Paradox</a></li>
+<li><a href="#orgheadline139">11.6. focus</a></li>
+<li><a href="#orgheadline140">11.7. artbollocks</a></li>
+<li><a href="#orgheadline141">11.8. darkroom</a></li>
+<li><a href="#orgheadline142">11.9. bury-successful-compilation</a></li>
 </ul>
 </li>
 </ul>
@@ -1934,8 +1935,8 @@ Displays added/modified/deleted on the left.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline124" class="outline-2">
-<h2 id="orgheadline124"><span class="section-number-2">8</span> Org-mode</h2>
+<div id="outline-container-orgheadline125" class="outline-2">
+<h2 id="orgheadline125"><span class="section-number-2">8</span> Org-mode</h2>
 <div class="outline-text-2" id="text-8">
 </div><div id="outline-container-orgheadline111" class="outline-3">
 <h3 id="orgheadline111"><span class="section-number-3">8.1</span> Prerequisites</h3>
@@ -2041,18 +2042,17 @@ We need <code>htmlize</code> to add syntax highlighting to org-exports for HTML 
       '((<span style="color: #7bc275;">"books"</span>
          <span style="color: #525252;">;; </span><span style="color: #525252;">Path to your org files.</span>
          <span style="color: #4db5bd;">:publishing-function</span> org-html-publish-to-html
-         <span style="color: #4db5bd;">:publishing-directory</span> <span style="color: #7bc275;">"~/Documents/Code/jethrokuan.github.io/"</span>
+         <span style="color: #4db5bd;">:publishing-directory</span> <span style="color: #7bc275;">"~/Documents/Code/books/"</span>
          <span style="color: #4db5bd;">:base-directory</span> <span style="color: #7bc275;">"~/.org/"</span>
          <span style="color: #4db5bd;">:exclude</span> <span style="color: #7bc275;">".*"</span>
          <span style="color: #4db5bd;">:include</span> [<span style="color: #7bc275;">"books.org"</span>]
          <span style="color: #4db5bd;">:with-emphasize</span> t
          <span style="color: #4db5bd;">:with-todo-keywords</span> t
          <span style="color: #4db5bd;">:with-toc</span> nil
-         <span style="color: #4db5bd;">:html-head</span> <span style="color: #7bc275;">"&lt;link rel=\"stylesheet\" href=\"/css/org.css\" type=\"text/</span><span style="color: #C57BDB; background-color: #000000;">css\"&gt;"</span>
          <span style="color: #4db5bd;">:html-preamble</span> t)
         (<span style="color: #7bc275;">"emacs.d"</span>
          <span style="color: #4db5bd;">:publishing-function</span> org-html-publish-to-html
-         <span style="color: #4db5bd;">:publishing-directory</span> <span style="color: #7bc275;">"~/Documents/Code/jethrokuan.github.io/"</span>
+         <span style="color: #4db5bd;">:publishing-directory</span> <span style="color: #7bc275;">"~/.emacs.d/"</span>
          <span style="color: #4db5bd;">:base-directory</span> <span style="color: #7bc275;">"~/.emacs.d/"</span>
          <span style="color: #4db5bd;">:exclude</span> <span style="color: #7bc275;">".*"</span>
          <span style="color: #4db5bd;">:include</span> [<span style="color: #7bc275;">"init.org"</span>]
@@ -2202,8 +2202,19 @@ I like to keep my books in sorted order, alphanumerically, and then by TODO keyw
 </div>
 </div>
 <div id="outline-container-orgheadline121" class="outline-3">
-<h3 id="orgheadline121"><span class="section-number-3">8.11</span> jethro/org-after-save-init</h3>
+<h3 id="orgheadline121"><span class="section-number-3">8.11</span> jethro/org-after-save-books</h3>
 <div class="outline-text-3" id="text-8-11">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(<span style="color: #C57BDB;">defun</span> <span style="color: #00B3EF;">jethro/org-after-save-books</span> ()
+  (org-publish <span style="color: #7bc275;">"books"</span>))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline122" class="outline-3">
+<h3 id="orgheadline122"><span class="section-number-3">8.12</span> jethro/org-after-save-init</h3>
+<div class="outline-text-3" id="text-8-12">
 <div class="org-src-container">
 
 <pre class="src src-emacs-lisp">(<span style="color: #C57BDB;">defun</span> <span style="color: #00B3EF;">jethro/org-after-save-init</span> ()
@@ -2213,9 +2224,9 @@ I like to keep my books in sorted order, alphanumerically, and then by TODO keyw
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline122" class="outline-3">
-<h3 id="orgheadline122"><span class="section-number-3">8.12</span> gtd-mode</h3>
-<div class="outline-text-3" id="text-8-12">
+<div id="outline-container-orgheadline123" class="outline-3">
+<h3 id="orgheadline123"><span class="section-number-3">8.13</span> gtd-mode</h3>
+<div class="outline-text-3" id="text-8-13">
 <div class="org-src-container">
 
 <pre class="src src-emacs-lisp">(<span style="color: #C57BDB;">use-package</span> <span style="color: #ECBE7B;">gtd-mode</span>
@@ -2229,9 +2240,9 @@ I like to keep my books in sorted order, alphanumerically, and then by TODO keyw
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline123" class="outline-3">
-<h3 id="orgheadline123"><span class="section-number-3">8.13</span> epresent</h3>
-<div class="outline-text-3" id="text-8-13">
+<div id="outline-container-orgheadline124" class="outline-3">
+<h3 id="orgheadline124"><span class="section-number-3">8.14</span> epresent</h3>
+<div class="outline-text-3" id="text-8-14">
 <div class="org-src-container">
 
 <pre class="src src-emacs-lisp">(<span style="color: #C57BDB;">use-package</span> <span style="color: #ECBE7B;">epresent</span>
@@ -2241,11 +2252,11 @@ I like to keep my books in sorted order, alphanumerically, and then by TODO keyw
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline129" class="outline-2">
-<h2 id="orgheadline129"><span class="section-number-2">9</span> Project Management</h2>
+<div id="outline-container-orgheadline130" class="outline-2">
+<h2 id="orgheadline130"><span class="section-number-2">9</span> Project Management</h2>
 <div class="outline-text-2" id="text-9">
-</div><div id="outline-container-orgheadline125" class="outline-3">
-<h3 id="orgheadline125"><span class="section-number-3">9.1</span> Smerge-mode</h3>
+</div><div id="outline-container-orgheadline126" class="outline-3">
+<h3 id="orgheadline126"><span class="section-number-3">9.1</span> Smerge-mode</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
 Useful when handling git merge conflicts.
@@ -2268,8 +2279,8 @@ Useful when handling git merge conflicts.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline126" class="outline-3">
-<h3 id="orgheadline126"><span class="section-number-3">9.2</span> Magit</h3>
+<div id="outline-container-orgheadline127" class="outline-3">
+<h3 id="orgheadline127"><span class="section-number-3">9.2</span> Magit</h3>
 <div class="outline-text-3" id="text-9-2">
 <div class="org-src-container">
 
@@ -2285,8 +2296,8 @@ Useful when handling git merge conflicts.
 </div>
 </div>
 
-<div id="outline-container-orgheadline128" class="outline-3">
-<h3 id="orgheadline128"><span class="section-number-3">9.3</span> Projectile</h3>
+<div id="outline-container-orgheadline129" class="outline-3">
+<h3 id="orgheadline129"><span class="section-number-3">9.3</span> Projectile</h3>
 <div class="outline-text-3" id="text-9-3">
 <div class="org-src-container">
 
@@ -2306,8 +2317,8 @@ Useful when handling git merge conflicts.
 </div>
 </div>
 
-<div id="outline-container-orgheadline127" class="outline-4">
-<h4 id="orgheadline127"><span class="section-number-4">9.3.1</span> Projectile Commander</h4>
+<div id="outline-container-orgheadline128" class="outline-4">
+<h4 id="orgheadline128"><span class="section-number-4">9.3.1</span> Projectile Commander</h4>
 <div class="outline-text-4" id="text-9-3-1">
 <div class="org-src-container">
 
@@ -2345,11 +2356,11 @@ Useful when handling git merge conflicts.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline132" class="outline-2">
-<h2 id="orgheadline132"><span class="section-number-2">10</span> Profiling</h2>
+<div id="outline-container-orgheadline133" class="outline-2">
+<h2 id="orgheadline133"><span class="section-number-2">10</span> Profiling</h2>
 <div class="outline-text-2" id="text-10">
-</div><div id="outline-container-orgheadline130" class="outline-3">
-<h3 id="orgheadline130"><span class="section-number-3">10.1</span> esup</h3>
+</div><div id="outline-container-orgheadline131" class="outline-3">
+<h3 id="orgheadline131"><span class="section-number-3">10.1</span> esup</h3>
 <div class="outline-text-3" id="text-10-1">
 <div class="org-src-container">
 
@@ -2359,8 +2370,8 @@ Useful when handling git merge conflicts.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline131" class="outline-3">
-<h3 id="orgheadline131"><span class="section-number-3">10.2</span> keyfreq</h3>
+<div id="outline-container-orgheadline132" class="outline-3">
+<h3 id="orgheadline132"><span class="section-number-3">10.2</span> keyfreq</h3>
 <div class="outline-text-3" id="text-10-2">
 <div class="org-src-container">
 
@@ -2373,11 +2384,11 @@ Useful when handling git merge conflicts.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline142" class="outline-2">
-<h2 id="orgheadline142"><span class="section-number-2">11</span> Miscellaneous</h2>
+<div id="outline-container-orgheadline143" class="outline-2">
+<h2 id="orgheadline143"><span class="section-number-2">11</span> Miscellaneous</h2>
 <div class="outline-text-2" id="text-11">
-</div><div id="outline-container-orgheadline133" class="outline-3">
-<h3 id="orgheadline133"><span class="section-number-3">11.1</span> Pivotal-mode</h3>
+</div><div id="outline-container-orgheadline134" class="outline-3">
+<h3 id="orgheadline134"><span class="section-number-3">11.1</span> Pivotal-mode</h3>
 <div class="outline-text-3" id="text-11-1">
 <div class="org-src-container">
 
@@ -2388,8 +2399,8 @@ Useful when handling git merge conflicts.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline134" class="outline-3">
-<h3 id="orgheadline134"><span class="section-number-3">11.2</span> which-key</h3>
+<div id="outline-container-orgheadline135" class="outline-3">
+<h3 id="orgheadline135"><span class="section-number-3">11.2</span> which-key</h3>
 <div class="outline-text-3" id="text-11-2">
 <div class="org-src-container">
 
@@ -2400,8 +2411,8 @@ Useful when handling git merge conflicts.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline135" class="outline-3">
-<h3 id="orgheadline135"><span class="section-number-3">11.3</span> nameless</h3>
+<div id="outline-container-orgheadline136" class="outline-3">
+<h3 id="orgheadline136"><span class="section-number-3">11.3</span> nameless</h3>
 <div class="outline-text-3" id="text-11-3">
 <div class="org-src-container">
 
@@ -2419,8 +2430,8 @@ Useful when handling git merge conflicts.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline136" class="outline-3">
-<h3 id="orgheadline136"><span class="section-number-3">11.4</span> firestarter</h3>
+<div id="outline-container-orgheadline137" class="outline-3">
+<h3 id="orgheadline137"><span class="section-number-3">11.4</span> firestarter</h3>
 <div class="outline-text-3" id="text-11-4">
 <div class="org-src-container">
 
@@ -2431,8 +2442,8 @@ Useful when handling git merge conflicts.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline137" class="outline-3">
-<h3 id="orgheadline137"><span class="section-number-3">11.5</span> Paradox</h3>
+<div id="outline-container-orgheadline138" class="outline-3">
+<h3 id="orgheadline138"><span class="section-number-3">11.5</span> Paradox</h3>
 <div class="outline-text-3" id="text-11-5">
 <p>
 Use Paradox instead of the default <code>package-list-packages</code>. <code>jethro/paradox-user-token</code> is defined in <code>secrets.el</code>, and contains a github API token which has <code>public_repo</code> permissions.
@@ -2447,8 +2458,8 @@ Use Paradox instead of the default <code>package-list-packages</code>. <code>jet
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline138" class="outline-3">
-<h3 id="orgheadline138"><span class="section-number-3">11.6</span> focus</h3>
+<div id="outline-container-orgheadline139" class="outline-3">
+<h3 id="orgheadline139"><span class="section-number-3">11.6</span> focus</h3>
 <div class="outline-text-3" id="text-11-6">
 <div class="org-src-container">
 
@@ -2459,8 +2470,8 @@ Use Paradox instead of the default <code>package-list-packages</code>. <code>jet
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline139" class="outline-3">
-<h3 id="orgheadline139"><span class="section-number-3">11.7</span> artbollocks</h3>
+<div id="outline-container-orgheadline140" class="outline-3">
+<h3 id="orgheadline140"><span class="section-number-3">11.7</span> artbollocks</h3>
 <div class="outline-text-3" id="text-11-7">
 <p>
 Prevent usage of passive voice, weasel words and other common grammatical mistakes.
@@ -2475,8 +2486,8 @@ Prevent usage of passive voice, weasel words and other common grammatical mistak
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline140" class="outline-3">
-<h3 id="orgheadline140"><span class="section-number-3">11.8</span> darkroom</h3>
+<div id="outline-container-orgheadline141" class="outline-3">
+<h3 id="orgheadline141"><span class="section-number-3">11.8</span> darkroom</h3>
 <div class="outline-text-3" id="text-11-8">
 <div class="org-src-container">
 
@@ -2487,8 +2498,8 @@ Prevent usage of passive voice, weasel words and other common grammatical mistak
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline141" class="outline-3">
-<h3 id="orgheadline141"><span class="section-number-3">11.9</span> bury-successful-compilation</h3>
+<div id="outline-container-orgheadline142" class="outline-3">
+<h3 id="orgheadline142"><span class="section-number-3">11.9</span> bury-successful-compilation</h3>
 <div class="outline-text-3" id="text-11-9">
 <p>
 Closes compile buffer if there are no errors.
@@ -2506,7 +2517,7 @@ Closes compile buffer if there are no errors.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2016-10-10 Mon 09:50</p>
+<p class="date">Created: 2016-10-10 Mon 12:19</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
