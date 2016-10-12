@@ -1,0 +1,93 @@
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans:700|Noto+Serif';
+@import "neutron";
+
+html {
+    background-color: #ffe;
+}
+body {
+    max-width: 900px;
+    margin: 20px auto; 
+
+    @include breakpoint(to-tablet) {
+        margin: 30px;
+    }
+}
+
+/* Typography */
+h1,h2,h3 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.66rem;
+}
+
+img {
+    width: 100%;
+}
+
+
+p, a {
+    font-family: "Noto Serif", "Georgia", serif;
+    font-weight: 400;
+}
+
+/* Experience */
+.experience {
+    article {
+        margin: 5px include;
+        @include columns((1,3));
+
+        @include breakpoint(to-tablet) {
+            @include columns(1);
+
+            img {
+                display: none;
+            }
+        }
+    }
+
+    
+
+    .meta__year {
+        float: right;
+    }
+}
+
+
+.works__list {
+    @include columns(3);
+
+    @include breakpoint(to-tablet) {
+        @include columns(2);
+    }
+    text-align: center;
+
+    img {
+        padding: 20px;
+    }
+
+    .works__tech {
+        margin: 0;
+        font-size: 0.8rem;
+    } 
+}
+
+.lang, .tech {
+    @include columns(5);
+
+    @include breakpoint(to-tablet) {
+        @include columns(4);
+    }
+}
+
+section {
+    margin-top: 40px;
+}
