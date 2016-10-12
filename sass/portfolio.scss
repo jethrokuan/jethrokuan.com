@@ -82,6 +82,8 @@ p, a {
 
 .lang, .tech {
     @include columns(5);
+    text-align: center;
+    font-weight: 400;
 
     @include breakpoint(to-tablet) {
         @include columns(4);
