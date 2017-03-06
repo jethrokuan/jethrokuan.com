@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/jethroksy
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://jethrokuan.com
+  * I am jethroksy (https://keybase.io/jethroksy) on keybase.
+  * I have a public key with fingerprint 9A69 81EE 6543 8CBF 592A  C3D5 E25D BF2B EE01 EB11
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01010b0d52358d1429eb11590229c5c01e6d33be0f2cd2802ed6119e9fac1503dab40a",
+            "fingerprint": "9a6981ee65438cbf592ac3d5e25dbf2bee01eb11",
+            "host": "keybase.io",
+            "key_id": "e25dbf2bee01eb11",
+            "kid": "01010b0d52358d1429eb11590229c5c01e6d33be0f2cd2802ed6119e9fac1503dab40a",
+            "uid": "34bc7edb6e71c41d711b267839c66f19",
+            "username": "jethroksy"
+        },
+        "service": {
+            "hostname": "jethrokuan.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1488818383,
+    "expire_in": 157680000,
+    "prev": "bee22036765fa1def9e3cc1420c04da4700b13a79f7199e0507189eefd3c8901",
+    "seqno": 31,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.64
+Comment: https://keybase.io/crypto
+
+yMIkAnicrVJbSBVBGF7tQh4Q66F66rYRWGjNzN5PBNVLFElkkBbFYWfmX93Us6c9
+qyWmFXQzKuwuBWE9RPcSi5IKMnsI7/ZgGVkh3SgLo6CygmalHoIem3kY5p/v+/5v
+Pv576SOkSEpFdWTs67eNy1Jam46VSvm3azorZOrxcjlaIRfB8AHFHJJBrMjlclRG
+WGyKuEYUzeRYJRZQjDULEWIxjSEMOlcUCsghjBMTEeA6xhZYjs2whhRuUxXZcpbs
+uPEC8BO+Gw+ErGXrlokBdE1VTEYdzSI2U7gGROPUIRRAKItGgljoJUOGMEftJMx2
+PVETl9iwvX/g/7Pv0mE5RaXMAE51MDBTMTcwpkQ3TMViuu5gKwQmwY/bJSDQ6yAo
+9L2iZLlcmSWLcpnLIEw2/MrfkFI7Ppt5JYKe8L3AY16xeCsMgkQ0pAbliRC7AWjs
+t0qMunEukhSEMvCTrheXo1ggWeCGslg1TRObiqlkybAx4foQc0OEZugmEitsA2VC
+UgRGCFJ0Q9ccG3NwLFAYEzEhhlRuqwZCFCu2YTkGtixAGjKwaQE4XGGmhcKck7A+
+7slRBQufdoHQTLoFcTso9UGuvHtnzUgpJSKNHpUajpgUSRv7Z/Da9o6Rbn0tnrb1
+wPaWhu8vzixoVI/vfHpr6ZFFvV9zprQOXtxxPn364Jvqh7WPLhyjM8ZlPvnZVTVB
+OmVeutRxaqCrZ8VQxpIteX35s4IjeY8er/zwtGrgXG/vt8+T9lflXuteRQ5vbl98
+PnK760laTXHH6RNDny7XpT/vG2zdtqJ/8ra6L8+q+/X2ihsHaxu+dxzNOHS1cebZ
+nsROs/LVg/GcZOeMmKsOdqQ9GODrCzq3f6TZE6+nvoKFh+7Meb+cNDN31Ly2+i33
+18olPE0a6P6WKiVqW5rmb5Z+pO/af5JFomRqdo/dNCt3zsR3eQtWr3nzcvzynPo9
+M5/l5vtXNjVk1vU339y3u9f8BYkATaA=
+=u8eB
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jethroksy
+
+==================================================================
