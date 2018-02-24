@@ -1,73 +1,40 @@
 @import 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700';
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-title {
-    display: none;
-}
-
 body {
-    background-color: #ffe;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-}
-
-.split {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.meta {
-    flex-direction: column;    
+  font-family: "Noto Sans", sans-serif;
+  background: #ffe;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 ul {
-    display: flex;
-    list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
 }
 
-li {
-    padding: 0 10px;
+.nav li {
+  padding: 0 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.email, .github {
+  margin-left: 3px;
 }
 
 a {
-    font-family: 'Noto Sans', sans-serif; 
-    text-decoration: none;
-    color: #222;
-    font-size: 1rem; 
-    padding: 3px;
+  text-decoration: none;
+  color: black;
 }
 
-nav a:hover {
-    background-color: #111; 
-    color: #fff;
-    cursor: pointer;
-}
-
-
-/* nav */
-nav a {
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-/* Meta */
-.meta ul {
-    flex-direction: column;
-}
-.meta a {
-    color: #555;
-}
-
-.meta a:hover {
-    text-decoration: underline;
+a:hover {
+  text-decoration: underline;
 }
